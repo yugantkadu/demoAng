@@ -1,0 +1,37 @@
+<table align="center">
+  <tr>
+    <td><input type="button" value="GetAll" (click)="getAllEmployees()"></td>
+  </tr>
+  <tr>
+    <td><input type="text" [(ngModel)] = "employeeId"></td>
+    <td><input type="button" value="GetById" (click)="getEmployeeById(employeeId)"></td>
+  </tr>
+  <tr>
+    <td><input type="text" [(ngModel)] = "employeeId" placeholder="Employee Id"></td>
+    <td><input type="text" [(ngModel)] = "employeeName" placeholder="Employee Name"></td>
+    <td><input type="text" [(ngModel)] = "employeeCity" placeholder="Employee City"></td>
+    <td><input type="text" [(ngModel)] = "employeeAge" placeholder="Employee Age"></td>
+    <td><input type="button" value="UpdateById" (click)="updateEmployee(employeeId, employeeName, employeeCity, employeeAge)"></td>
+  </tr>
+  <tr>
+    <td><input type="text" [(ngModel)] = "employeeId"></td>
+    <td><input type="button" value="Delete EMployee" (click)="deleteEmployee(employeeId)"></td>
+  </tr>
+</table>
+<table *ngIf="employee.length != 0">
+  <tr>
+    <th></th>
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Employee City</th>
+    <th>Employee Age</th>
+  </tr>
+  <tr *ngFor="let emp of employee">
+    <td></td>
+    <td>{{emp.EmployeeID}}</td>
+    <td>{{emp.EmployeeName}}</td>
+    <td>{{emp.EmployeeCity}}</td>
+    <td>{{emp.EmployeeAge}}</td>
+  </tr>
+  </table>
+
