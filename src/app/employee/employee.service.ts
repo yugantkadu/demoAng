@@ -9,6 +9,11 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
+  // This is EmployeeService
+  // In this file we are doing business logic for our Project
+  // We are creating some functions i.e. getAllEmployees
+  // getElementById , updateEmployee , deleteEmployee
+  
   getAllEmployees(): Observable<any>{
     const url = 'http://localhost:57473/api/home';
     return this.http.get<any>(url);
