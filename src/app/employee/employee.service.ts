@@ -9,6 +9,10 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
+/* Changes to be made in Employee.service*/
+/*class is employee.service*/
+/*get update*/
+/*delete*/
   getAllEmployees(): Observable<any>{
     const url = 'http://localhost:57473/api/home';
     return this.http.get<any>(url);
